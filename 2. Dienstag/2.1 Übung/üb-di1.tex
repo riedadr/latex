@@ -1,0 +1,51 @@
+\documentclass{article}
+
+\usepackage[a4paper, left=3cm, right=3cm, top=2.5cm, headheight=110pt]{geometry}
+\usepackage[ngerman]{babel}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\usepackage[math]{kurier}
+\usepackage[T1]{fontenc}
+
+\usepackage{blindtext}
+
+%\usepackage{polyglossia} nur LuaTex
+\usepackage{csquotes}
+
+
+\pagestyle{fancy}
+\fancyhead[L]{Einführung in \LaTeX \\ Übung 3}
+\fancyhead[R]{Adrian Riedel \\ 8. März 2022}
+
+\begin{document}
+\section*{Übung 3.1}
+
+\begin{enumerate}[label=\alph*)]
+    \item \underline{
+              \textbf{\textsc{Blindtext}}
+              (\href{https://tug.org/FontCatalogue/kurier/}{\textit{Schriftart: Kurier}})
+          }
+
+          \blindtext[2]
+\end{enumerate}
+
+\section*{Übung 3.2:  \emph{\normalsize{Allgemeine Formatierung}}}
+In \LaTeX gibt es unter Anderem folgende Formatierungsmöglichkeiten:
+\begin{itemize}
+    \item Listen
+          \begin{description}
+              \item [\small{- Ungeordnet}] \tiny{mit voranstehendem Symbol, z. B. \enquote{-}, \enquote{•} oder \enquote{$\ast$}}
+              \item [\small{- Geordnet}] \tiny{durchnummeriert mit Zahlen oder Buchstaben}
+          \end{description}
+    \item Absätze
+    \item Hervorhebungen
+          \begin{itemize}
+              \item \textbf{fettgedruckt}
+              \item \textit{kursiv}
+              \item \underline{unterstrichen}
+          \end{itemize}
+\end{itemize}
+
+\end{document}
