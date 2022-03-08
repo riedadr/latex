@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage[ngerman]{babel}
+\usepackage[a4paper, left=3cm, right=3cm, top=2.5cm, headheight=110pt]{geometry}
+
+\usepackage{cmbright}
+\usepackage[OT1]{fontenc}
+
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage[hidelinks]{hyperref}
+\usepackage{siunitx}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L]{Einführung in \LaTeX \\ Vorlesung 4}
+\fancyhead[C]{{Mathesatz}\\}
+\fancyhead[R]{Adrian Riedel \\ 8. März 2022}
+
+%zwei Möglichkeiten, um Variablen zu erstellen
+\newcommand{\pbsb}{pneumatischbetriebene Schaumstoffbandsäge}
+\newcommand\rot[1]{\textcolor{red}{#1}}
+
+
+
+\begin{document}
+Diese \pbsb{} wurde über eine Variable (bzw. Command) eingefügt.
+Die \pbsb{} ist \rot{rot}
+
+\part*{Mathe}
+
+Mithilfe des Satz des Pythagoras kann mit Hilfe der Kantenlängen eines Dreiecks die Hypothenus berechnen:
+$a^2 + b^2 = c^2$.
+\section*{Gaußsche Summenformel}
+Durch das Summenzeichen kann man ausdrücken, dass Zahlen addiert werden soll, ohne diese Zahlen einzeln aufschreiben zu müssen.
+\( \sum^n_1 i \).
+
+\begin{displaymath}
+    n = \sum^n_{i=0} i = \frac{n(n+1)}{2}
+\end{displaymath}
+Hier wird zum Beispiel ein Weg dargestelle, wie man ganz schnell alle natürlichen Zahlen bis zu einer bestimmten Zahl addiert.
+
+
+\begin{align}
+    a     & = b, & b = c \\
+    b = c & = a
+\end{align}
+
+\section*{Symbole}
+Mit Hilfe von \href{https://detexify.kirelabs.org/classify.html}{Detextify}
+kann man einfache Symbole zeichnen und bekommt dann die Bezeichnung und das Paket des Symbols.
+
+\begin{displaymath}
+    \vec a =
+    \int^{a}_{b}
+    { 3 * \left(
+        \frac{\prod^{n}_{i=1}{n}}{\sqrt[3]{8}}
+    \right) }
+\end{displaymath}
+
+\[ m = \left(
+    \begin{matrix}
+
+            a_1 & a_2 & a_3 \\
+            b_1 & b_2 & b_3 \\
+            c_1 & c_2 & c_3
+        \end{matrix}
+    \right)
+\]
+
+\section*{Einheiten}
+Die Fallbeschleunigung in Europa beträgt im Schnitt
+\SI[per-mode=symbol]{9.81}{\metre\per\sec^{2}}
+
+\end{document}
