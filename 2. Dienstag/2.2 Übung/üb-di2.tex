@@ -1,0 +1,93 @@
+\documentclass{article}
+
+%? Pakete für Sprache und Layout
+\usepackage[ngerman]{babel}
+\usepackage[a4paper, left=3cm, right=3cm, top=2.5cm, headheight=110pt]{geometry}
+
+%? Pakete für Aufgaben
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{siunitx}    %[binary-units] muss nicht mehr angegeben werden
+
+%? Pakete für Optik
+\usepackage{cmbright}
+\usepackage[OT1]{fontenc}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+
+% Kopfzeile
+\pagestyle{fancy}
+\fancyhead[L]{Einführung in \LaTeX \\ Übung 4}
+\fancyhead[C]{{Mathematiksatz}\\}
+\fancyhead[R]{Adrian Riedel \\ 8. März 2022}
+
+%! für Übung 4.1 a)
+\newcommand\pbsb[1]{\textcolor{#1}{pneumatischbetriebene Schaumstoffbandsäge}}
+\newcommand{\empha}{empasize}
+
+
+\begin{document}
+\section*{Übung 4.1: Eigene Befehle}
+\begin{enumerate}[label=\alph*)]
+    \item \pbsb{red}
+    \item Der Befehl \emph{emph} ist bereits vergeben.
+          Man müsste den eigenen Befehl anders benennen, z. B. \emph{empha}.
+\end{enumerate}
+
+\section*{Übung 4.2: Formeln}
+\begin{enumerate}[label=\alph*)]
+    \item Maxwell-Gleichungen
+          \begin{align}
+              \nabla \times \vec{E} & = - \frac{\partial \vec{B}}{\partial t}         &
+              \nabla \times \vec{B} & = \vec{j} + \frac{\partial \vec{E}}{\partial t}   \\
+              \nabla \cdot \vec{E}  & = \rho                                          &
+              \nabla \cdot \vec{B}  & = 0
+          \end{align}
+
+    \item Shannon Entropy
+          \begin{displaymath}
+              H(X) = - \sum^{n}_{i=1}{P}(x_i) \log P(x_i)
+          \end{displaymath}
+
+    \item Skalarmultiplikation
+          \begin{displaymath}
+              \alpha \cdot A =
+              \alpha \cdot \left(
+              \begin{matrix}
+                  a_{11} & \hdots & a_{1n} \\
+                  \vdots & \ddots & \vdots \\
+                  a_{m1} & \hdots & a_{mn}
+              \end{matrix}
+              \right) =
+              \left(
+              \begin{matrix}
+                  \alpha \cdot a_{11} & \hdots & a_{1n} \\
+                  \vdots              & \ddots & \vdots \\
+                  \alpha \cdot a_{m1} & \hdots & a_{mn}
+              \end{matrix}
+              \right)
+          \end{displaymath}
+\end{enumerate}
+
+\section*{Übung 4.3: Inline-Formeln}
+Wir sollen die Formel \( \frac{1}{2} \cdot \sum^{N}_{n=0} g_{n}(x) = \int^{b}_{a} f(x) dx\) nehmen und in einen Fließtext schreiben.
+
+\section*{Übung 4.4: Einheiten}
+\begin{enumerate}[label=\alph*)]
+    \item Frequenzen \\
+          Das HackRF arbeitet von 0.1 \si{\giga\hertz} bis 6 \si{\giga\hertz}
+
+    \item Binär \\
+          $x = \SI{1}{\giga\byte}$ oder $ \SI{1}{\gibi\byte}$ \small({Die Binäreinheiten müssen bei \emph{siunitx} nicht mehr angegeben werden})
+
+    \item Sonstige
+          \begin{itemize}
+              \item \SI{10}{\gram}
+              \item \SI{16.7}{\metre\per\s}
+              \item \SI{90}{\degree}
+              \item \SI{100}{\percent}
+              \item \SI{0.13}{\metre}, \SI{0.67}{\metre} und \SI{0.80}{\metre}
+          \end{itemize}
+\end{enumerate}
+
+\end{document}
