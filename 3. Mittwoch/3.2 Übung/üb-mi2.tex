@@ -1,0 +1,89 @@
+\documentclass{article}
+
+%? Pakete für Sprache und Layout
+\usepackage[ngerman]{babel}
+\usepackage[a4paper, left=3cm, right=3cm, top=2.5cm, headheight=110pt]{geometry}
+
+%? Pakete für Aufgaben
+\usepackage{tikz}
+\usetikzlibrary{trees}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
+%? Pakete für Optik
+\usepackage{cmbright}
+\usepackage[OT1]{fontenc}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{csquotes}
+
+
+% Kopfzeile
+\pagestyle{fancy}
+\fancyhead[L]{Einführung in \LaTeX \\ Übung 6}
+\fancyhead[C]{{Gleitumgebung}\\}
+\fancyhead[R]{Adrian Riedel \\ 9. März 2022}
+
+
+\begin{document}
+\section*{Übung 6.1: Baum mit TikZ}
+\begin{enumerate}[label=\alph*)]
+    \item Biere \\
+          \begin{figure}[h]
+              \centering
+              \begin{tikzpicture}[
+                      edge from parent fork down,
+                      level 1/.style={sibling distance=5cm},
+                      level 2/.style={sibling distance=2cm},
+                  ]
+                  \node {Bier}
+                  child {node {obergärig}
+                          child {node {Alt}}
+                          child {node {Kölsch}}
+                          child {node {Weizen}}
+                      }
+                  child {node {untergärig}
+                          child {node {Märzen}}
+                          child {node {Pils}}
+                      }
+                  ;
+              \end{tikzpicture}
+              \caption{Stammbaum einiger Bierstile}
+          \end{figure}
+\end{enumerate}
+
+\section*{Übung 6.2: Daten darstellen mit pgfplots}
+\begin{enumerate}[label=\alph*)]
+    \item Picture 1 \\
+
+              \begin{figure}[h]
+                \centering
+                  \begin{tikzpicture}[scale=.5]
+                      \begin{axis}[
+                              width=\linewidth, % Scale the plot to \linewidth
+                              grid=major, % Display a grid
+                              grid style={line width=.1pt, draw=gray!30}, % Set the style
+                              xlabel= $x$, % Set the labels
+                              xtick={1,2,3,4,5},
+                              ylabel= $y$,
+                              ytick={2,4,6,8},
+                          ]
+                          \addplot
+                          table[x=x,y=y1,col sep=comma] {data.csv};
+                          \addlegendentry{$y1$}
+                          \addplot
+                          table[x=x,y=y2,col sep=comma] {data.csv};
+                          \addlegendentry{$y2$}
+                          \addplot
+                          table[x=x,y=y3,col sep=comma] {data.csv};
+                          \addlegendentry{$y2$}
+                      \end{axis}
+                  \end{tikzpicture}
+                  \caption{Messergebnisse}
+              \end{figure}
+\end{enumerate}
+
+
+
+
+\end{document}
