@@ -1,0 +1,40 @@
+% !TEX program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !TEX spellcheck = de_DE
+
+\documentclass{scrreprt}
+\usepackage[ngerman]{babel}
+
+
+\usepackage{blindtext,booktabs,color,nicefrac,polyglossia,setspace,xltxtra,yfonts,hyperref}
+\usepackage{listings} %code highlighter
+\usepackage{color} %use color
+\usepackage{acronym}
+
+
+\setmainlanguage{german}
+
+\setromanfont[Mapping=tex-text]{Linux Libertine O}
+\setsansfont[Mapping=tex-text]{Linux Biolinum O}
+
+\onehalfspacing
+
+
+
+
+\begin{document}
+
+\subsection*{Abstract}
+Dieses Dokument dient der Übung des Satzes von umfangreichen Projekten in \LaTeX\index{LaTeX@\LaTeX}. Es gehört zum siebten Übungszettel des \LaTeX-Kurses im Wintersemester 2016\,/\,17. Inhaltlich hat es so ziemlich nichts zu bieten, es könnte aber interessant sein, sich den zugehörigen Sourcecode mal anzusehen, da er eine Menge interessanter \LaTeX-Kommandos enthält.
+
+
+
+\input{content/titel}
+\input{content/chapter1}
+\input{content/code.tex}
+\include{content/chapter2}
+\input{content/chapter4}
+\input{content/acronym}
+
+
+\end{document}

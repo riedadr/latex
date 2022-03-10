@@ -1,0 +1,33 @@
+\documentclass{article}
+
+%? Pakete für Sprache und Layout
+\usepackage[ngerman]{babel}
+\usepackage[a4paper, left=3cm, right=3cm, top=2.5cm, headheight=110pt]{geometry}
+
+%? Pakete für Aufgaben
+\usepackage{csquotes}
+\usepackage{biblatex}
+
+%? Pakete für Optik
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+
+% Kopfzeile
+\pagestyle{fancy}
+\fancyhead[L]{Einführung in \LaTeX \\ Übung 8}
+\fancyhead[C]{{Bibliografie}\\}
+\fancyhead[R]{Adrian Riedel \\ 10. März 2022}
+
+\addbibresource{literatur.bib}
+
+\begin{document}
+\section*{Übung 8.1: Bibliografien mit biblatex}
+\begin{enumerate}[label=\alph*)]
+    \item Bib anlegen und Einträge einfügen.
+    \item Bib\LaTeX{} konfigurieren und Datei einbinden. Als Zitierstil wird der aus den Folien verwendet.
+    \item Das hier ist ein kurzer Text, der vielleicht in einer der Quellen vorkommt, vielleicht aber auch nicht. \parencite{8869134}
+\end{enumerate}
+
+\printbibliography
+
+\end{document}
