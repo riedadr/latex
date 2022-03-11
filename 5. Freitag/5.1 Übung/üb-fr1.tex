@@ -1,0 +1,53 @@
+\documentclass[xetex]{beamer}
+\usepackage{fontspec, listings, color}
+
+\usetheme{metropolis}
+
+\setmonofont[Scale=0.8]{Cascadia Code}
+
+\lstset{
+    keywordstyle=\color{blue},
+    language=Java,
+}
+
+\title{Übung 9: Präsentation in \LaTeX}
+
+\begin{document}
+\maketitle
+\begin{frame}{Inhalt}
+    \tableofcontents
+\end{frame}
+
+\section{Einleitung}
+\begin{frame}{Was ist das?}
+    Moin erstmal. \\
+    Diese Präsentation dient zum Kennenlernen der Möglichkeiten von Präsentationen in \LaTeX.
+\end{frame}
+
+\begin{frame}{Was macht das?}
+    \structure{Wir schauen uns erstmal ein paar Grundlagen an:}
+    \begin{itemize}
+        \item Dokumentenklasse \emph{beamer}
+        \item Verwenden von Themes
+        \item Erstellen einer Titelseite sowie Inhaltsverzeichnis
+    \end{itemize}
+\end{frame}
+
+\section{Ein bissle Code}
+\begin{frame}[fragile]{Codebeispiel - lstlisting}
+    Das ist zwar nicht die dritte Seite, aber hier kommt Code:
+
+    \begin{lstlisting}
+
+    public static void hello {
+            System.out.println("Hello World!");
+        }
+    \end{lstlisting}
+\end{frame}
+
+
+
+
+
+
+\end{document}

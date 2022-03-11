@@ -1,0 +1,36 @@
+\documentclass[a4paper]{scrlttr2}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[german]{babel}
+\usepackage{url}
+
+
+\setkomavar{fromname}{Adrian Riedel}
+\setkomavar{fromaddress}{München}
+\setkomavar{fromemail}{adrian.riedel@hof-university.de}
+
+\begin{document}
+
+\begin{letter}{
+    Max Mustermann \\
+    Musterstr. 404 \\
+    12345 Musterstadt
+}
+
+\KOMAoptions{fromemail=true}
+\setkomavar{subject}{Anschreiben}
+\opening{Moin beinand,}
+Ich schreibe Ihnen in Zusammenhang mit der Übung 10 der Praxisblock-Veranstaltung 
+\emph{Einführung in \LaTeX}. \\
+Da ich bereits einen Arbeitsplatz habe und es mir dort sehr gut gefällt,
+bewerbe ich mich hiermit bei Ihnen nicht.
+
+
+
+\closing{Servus und bis bald,}
+
+\encl{Irgendwas wichtiges, vielleicht}
+
+\end{letter}
+
+\end{document}
